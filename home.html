@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home - JK</title>
+
+		<!-- css style link -->
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<!-- Font family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" /> -->
+		<link href="https://fonts.googleapis.com/css2?family=Genos:wght@400&family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+		<!-- Boxicons CSS -->
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+		<!-- Scroll link -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<!-- Bootstrap cdn -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+		<style>
+			.parent-loader {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+			.loader {
+				--path: #d50000;
+				--dot: #f5f5f5;
+				--duration: 3s;
+				width: 44px;
+				height: 44px;
+				position: relative;
+			}
+
+			.loader:before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				position: absolute;
+				display: block;
+				background: var(--dot);
+				top: 37px;
+				left: 19px;
+				transform: translate(-18px, -18px);
+				animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+			}
+
+			.loader svg {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+			.loader svg rect,
+			.loader svg polygon,
+			.loader svg circle {
+				fill: none;
+				stroke: var(--path);
+				stroke-width: 10px;
+				stroke-linejoin: round;
+				stroke-linecap: round;
+			}
+
+			.loader svg polygon {
+				stroke-dasharray: 145 76 145 76;
+				stroke-dashoffset: 0;
+				animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+			}
+
+			.loader svg rect {
+				stroke-dasharray: 192 64 192 64;
+				stroke-dashoffset: 0;
+				animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+			}
+
+			.loader svg circle {
+				stroke-dasharray: 150 50 150 50;
+				stroke-dashoffset: 75;
+				animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+			}
+
+			.loader.triangle {
+				width: 48px;
+			}
+
+			.loader.triangle:before {
+				left: 21px;
+				transform: translate(-10px, -18px);
+				animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+			}
+
+			@keyframes pathTriangle {
+				33% {
+					stroke-dashoffset: 74;
+				}
+
+				66% {
+					stroke-dashoffset: 147;
+				}
+
+				100% {
+					stroke-dashoffset: 221;
+				}
+			}
+
+			@keyframes dotTriangle {
+				33% {
+					transform: translate(0, 0);
+				}
+
+				66% {
+					transform: translate(10px, -18px);
+				}
+
+				100% {
+					transform: translate(-10px, -18px);
+				}
+			}
+
+			@keyframes pathRect {
+				25% {
+					stroke-dashoffset: 64;
+				}
+
+				50% {
+					stroke-dashoffset: 128;
+				}
+
+				75% {
+					stroke-dashoffset: 192;
+				}
+
+				100% {
+					stroke-dashoffset: 256;
+				}
+			}
+
+			@keyframes dotRect {
+				25% {
+					transform: translate(0, 0);
+				}
+
+				50% {
+					transform: translate(18px, -18px);
+				}
+
+				75% {
+					transform: translate(0, -36px);
+				}
+
+				100% {
+					transform: translate(-18px, -18px);
+				}
+			}
+
+			@keyframes pathCircle {
+				25% {
+					stroke-dashoffset: 125;
+				}
+
+				50% {
+					stroke-dashoffset: 175;
+				}
+
+				75% {
+					stroke-dashoffset: 225;
+				}
+
+				100% {
+					stroke-dashoffset: 275;
+				}
+			}
+
+			.loader {
+				display: inline-block;
+				margin: 0 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent-loader">
+			<div class="loader">
+				<svg viewBox="0 0 80 80">
+					<circle id="test" cx="40" cy="40" r="32"></circle>
+				</svg>
+			</div>
+
+			<div class="loader triangle">
+				<svg viewBox="0 0 86 80">
+					<polygon points="43 8 79 72 7 72"></polygon>
+				</svg>
+			</div>
+
+			<div class="loader">
+				<svg viewBox="0 0 80 80">
+					<rect x="8" y="8" width="64" height="64"></rect>
+				</svg>
+			</div>
+		</div>
+		<div class="content">
+			<div class="birds" style="height: 100vh">
+				<div class="container-fluid">
+					<div class="container">
+						<!-- Header Section -->
+						<div class="header-orig" data-aos="fade-right" data-aos-duration="1900">
+							<div class="logo">
+								<a href="home.html" class="name">jk</a>
+								<h6 class="portfolio">Portfolio</h6>
+							</div>
+							<div class="list-items">
+								<ul>
+									<li><a href="about.html">About</a></li>
+									<li><a href="project.html">Project</a></li>
+									<li><a href="experience.html">Experience</a></li>
+								</ul>
+							</div>
+							<div class="button">
+								<button class="btn" type="button">
+									<a href="./contact.html"
+										>Contact Me
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+											<path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+										</svg>
+									</a>
+								</button>
+							</div>
+						</div>
+						<div class="list-items-mobile">
+							<ul>
+								<li><a href="about.html">About</a></li>
+								<li><a href="project.html">Project</a></li>
+								<li><a href="experience.html">Experience</a></li>
+							</ul>
+						</div>
+						<!-- End Header Section -->
+					</div>
+				</div>
+				<div class="line-bg"></div>
+				<div class="container-fluid">
+					<div class="container">
+						<!-- Hero Section -->
+						<div class="hero">
+							<div>
+								<div class="d-flex justify-content-center" data-aos="zoom-in" data-aos-duration="1900">
+									<img class="avatar" src="./image/avatar.jpg" alt="" />
+								</div>
+								<h1 class="ml11">
+									<span class="text-wrapper">
+										<span class="line line1"></span>
+										<span class="letters">Hi Im John Kenneth</span>
+									</span>
+								</h1>
+								<h1 class="hero-title" data-aos="zoom-in" data-aos-duration="1900">Frontend Developer and UI/UX Designer</h1>
+								<div class="sm-icon" data-aos="zoom-in" data-aos-duration="1900">
+									<a href="https://www.instagram.com/jk.teodoro/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+									<a href="https://www.facebook.com/john.kenneth.chods?mibextid=ZbWKwLl" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+									<a href="https://www.linkedin.com/in/john-kenneth-teodoro-b71510200/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+									<a href="https://github.com/johnkennethpteodoro" target="_blank"><i class="bx bxl-github"></i></a>
+								</div>
+								<div class="parent-arrow-down">
+									<div class="arrow-down">
+										<a href="#project"><i class="bx bxs-chevron-down"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--End Hero Section -->
+					</div>
+				</div>
+			</div>
+			<div id="project" class="container-fluid">
+				<div class="container">
+					<!-- Project Section -->
+					<div class="project">
+						<div class="d-flex justify-content-between title-btn">
+							<h6 class="title" data-aos="zoom-in-right">Capstone Projects</h6>
+							<div class="button">
+								<button class="btn" type="button">
+									<a href="./project.html">View All </a>
+								</button>
+							</div>
+						</div>
+						<div class="proj-child" data-aos="zoom-out">
+							<img src="./image/laptop-try.png" alt="" />
+							<div class="project-details">
+								<h6 class="project-title">Logistic Management System</h6>
+								<p class="project-description">The logistics management system collaborates with suppliers for efficient delivery management, real-time visibility, automated invoicing, and integration with other systems. This reduces costs and improves overall efficiency.</p>
+								<div class="row tech-lang">
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Html</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Css</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Bootstrap</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Javascript</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Php</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Mysqli</h6>
+									</div>
+								</div>
+								<button class="btn">
+									<a href="https://logistic-management-system.bcp-sms2.com/login.php" target="_blank">
+										Take a look
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+										</svg>
+									</a>
+								</button>
+							</div>
+						</div>
+
+						<div class="proj-child" data-aos="zoom-out">
+							<img src="./image/laptop.png" alt="" />
+							<div class="project-details">
+								<h6 class="project-title">Learning Management System</h6>
+								<p class="project-description">A Learning Management System (LMS) is a software application designed to manage and deliver educational content and training programs. It provides a platform for educators, trainers, and learners to create, manage, and track learning activities, including courses, assessments, and certifications.</p>
+								<div class="row tech-lang">
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Html</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Css</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Php</h6>
+									</div>
+									<div class="col-4 col-md-3 mb-2">
+										<h6>Mysqli</h6>
+									</div>
+								</div>
+
+								<button class="btn">
+									Take a look
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- End Project Section -->
+				</div>
+			</div>
+			<div class="line-bg"></div>
+			<div class="container-fluid">
+				<div class="container">
+					<!-- Footer Section -->
+					<div class="footer">
+						<div class="d-flex justify-content-between social-module">
+							<div>
+								<h6>Social Link</h6>
+								<div class="sm-icon">
+									<a href="https://www.instagram.com/jk.teodoro/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+									<a href="https://www.facebook.com/john.kenneth.chods?mibextid=ZbWKwLl" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+									<a href="https://www.linkedin.com/in/john-kenneth-teodoro-b71510200/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+									<a href="https://github.com/johnkennethpteodoro" target="_blank"><i class="bx bxl-github"></i></a>
+								</div>
+							</div>
+							<div class="list-items">
+								<ul>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Project</a></li>
+									<li><a href="#">Experience</a></li>
+								</ul>
+							</div>
+						</div>
+						<h6 class="copy-right">Created by John Kenneth Teodoro</h6>
+					</div>
+					<!-- End Footer Section -->
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+		<script>
+			VANTA.BIRDS({
+				el: ".birds",
+				quantity: 3,
+				backgroundColor: 0x212121,
+				color1: 0xd50000,
+				color2: 0xd50000,
+				mouseControls: true,
+				touchControls: true,
+				gyroControls: false,
+				minHeight: 200.0,
+				minWidth: 200.0,
+				scale: 1.0,
+				scaleMobile: 1.0,
+			});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+		<script src="./js/home.js"></script>
+		<script>
+			// get the parent element
+			const parentLoader = document.querySelector(".parent-loader");
+
+			// check if the loader has been displayed before
+			if (localStorage.getItem("loaderDisplayed")) {
+				// hide the parent element immediately if the loader has been displayed before
+				parentLoader.style.display = "none";
+			} else {
+				// show the parent element if the loader has not been displayed before
+				parentLoader.style.display = "block";
+
+				// set the flag in localStorage to indicate that the loader has been displayed before
+				localStorage.setItem("loaderDisplayed", true);
+
+				// hide the parent element after 5 seconds
+				setTimeout(() => {
+					parentLoader.style.display = "none";
+				}, 5000);
+			}
+		</script>
+	</body>
+</html>
