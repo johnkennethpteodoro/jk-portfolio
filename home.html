@@ -23,7 +23,7 @@
 
 		<!-- Bootstrap cdn -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-		<style>
+		<!-- <style>
 			.parent-loader {
 				display: flex;
 				justify-content: center;
@@ -183,10 +183,10 @@
 				display: inline-block;
 				margin: 0 16px;
 			}
-		</style>
+		</style> -->
 	</head>
 	<body>
-		<div class="parent-loader">
+		<!-- <div class="parent-loader">
 			<div class="loader">
 				<svg viewBox="0 0 80 80">
 					<circle id="test" cx="40" cy="40" r="32"></circle>
@@ -204,7 +204,7 @@
 					<rect x="8" y="8" width="64" height="64"></rect>
 				</svg>
 			</div>
-		</div>
+		</div> -->
 		<div class="content">
 			<div class="birds" style="height: 100vh">
 				<div class="container-fluid">
@@ -411,26 +411,5 @@
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 		<script src="./js/home.js"></script>
-		<script>
-			// get the parent element
-			const parentLoader = document.querySelector(".parent-loader");
-
-			// check if the loader has been displayed before
-			if (localStorage.getItem("loaderDisplayed")) {
-				// hide the parent element immediately if the loader has been displayed before
-				parentLoader.style.display = "none";
-			} else {
-				// show the parent element if the loader has not been displayed before
-				parentLoader.style.display = "block";
-
-				// set the flag in localStorage to indicate that the loader has been displayed before
-				localStorage.setItem("loaderDisplayed", true);
-
-				// hide the parent element after 5 seconds
-				setTimeout(() => {
-					parentLoader.style.display = "none";
-				}, 5000);
-			}
-		</script>
 	</body>
 </html>
