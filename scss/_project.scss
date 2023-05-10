@@ -266,6 +266,11 @@ body {
 				font-size: $font-size-xs;
 				font-weight: $font-weight-light;
 			}
+
+			.active .active-a {
+				font-weight: $font-weight-regular;
+				font-size: 15px;
+			}
 		}
 	}
 
