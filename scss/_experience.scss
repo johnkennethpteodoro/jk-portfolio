@@ -288,13 +288,14 @@ body {
 				.img-expi {
 					display: block !important;
 					img {
-						transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 						width: 100% !important;
 						height: auto;
 						object-fit: cover;
 						border: 1px solid #ffffff;
+						transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 						&:hover {
-							transform: scale(1.3) rotate(-3deg);
+							transform: scale(1.1) rotate(-3deg);
+							opacity: 1 !important;
 						}
 					}
 				}
