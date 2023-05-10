@@ -407,6 +407,9 @@ body .line-bg:before {
 }
 /* mobile display */
 @media only screen and (max-width: 767px) {
+  * {
+    border: 1px dashed #ffffff;
+  }
   .header-orig {
     padding-top: 10px;
   }
