@@ -159,7 +159,7 @@ body .line-bg:before {
 .hero .parent-arrow-down .arrow-down a i {
   text-align: center;
   font-size: 40px;
-  color: #d50000;
+  color: #f5f5f5;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1822,12 +1822,12 @@ body .line-bg:before {
   margin-bottom: 7px;
 }
 .contact .contact-content .contact-card .card-body .form .form-group input {
-  border: 2px solid #212121;
+  border: 1px solid #212121;
   border-radius: 0px;
   background: #f5f5f5;
 }
 .contact .contact-content .contact-card .card-body .form .form-group textarea {
-  border: 2px solid #212121;
+  border: 1px solid #212121;
   border-radius: 0px;
   background: #f5f5f5;
 }
