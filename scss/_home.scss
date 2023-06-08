@@ -4,11 +4,9 @@
 	font-family: $font-family;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	// border: 1px dashed white;
 }
 
 body {
-	background: #212121 !important;
 	.line-bg {
 		display: flex;
 		align-items: center;
@@ -380,21 +378,28 @@ body {
 
 	.project {
 		// padding-top: 30px;
-		.title {
-			font-size: 60px;
-			font-weight: $font-weight-bold;
-			color: $primary;
-			margin-bottom: 50px;
-			padding-top: 30px;
-			line-height: 55px;
+		.title-btn {
+			.title {
+				font-size: 60px;
+				font-weight: $font-weight-bold;
+				color: $font-color;
+				margin-bottom: 50px;
+				padding-top: 30px;
+				line-height: 55px;
+				text-align: center;
+			}
+			.button {
+				display: none;
+			}
 		}
 		.proj-child {
 			display: block;
 			margin-bottom: 80px;
+			text-align: center;
 
 			img {
 				width: auto;
-				height: 320px;
+				height: 163px;
 			}
 
 			.project-details {
@@ -413,6 +418,21 @@ body {
 					margin-top: 15px;
 				}
 
+				.tech-lang {
+					display: flex;
+					justify-content: start;
+					margin-bottom: 30px;
+					h6 {
+						color: #212121;
+						padding: 4px 12px;
+						background: $font-color;
+						border-radius: 20px;
+						font-size: $font-size-xxs;
+						font-weight: $font-weight-semibold;
+						text-align: center;
+					}
+				}
+
 				.btn {
 					color: $font-color;
 					background: $primary;
@@ -423,8 +443,13 @@ body {
 					letter-spacing: 1px;
 					font-size: $font-size-xs;
 
-					i {
-						font-size: 16px;
+					a {
+						color: $font-color;
+						text-decoration: none;
+						svg {
+							margin-bottom: 4px;
+							margin-left: 4px;
+						}
 					}
 
 					&:hover {

@@ -8,7 +8,6 @@
 }
 
 body {
-	background: #212121 !important;
 	.line-bg {
 		display: flex;
 		align-items: center;
@@ -291,43 +290,6 @@ body {
 	}
 }
 
-// .resume {
-// 	margin-top: 70px;
-// 	margin-bottom: 70px;
-// 	.title {
-// 		color: $font-color;
-// 		font-size: $font-size-md;
-// 		font-weight: $font-weight-regular;
-// 		letter-spacing: 1px;
-// 	}
-// 	.card {
-// 		border: none !important;
-// 		margin-top: 20px;
-// 		border-radius: 0px;
-// 		.card-body {
-// 			.description {
-// 				text-align: center;
-// 			}
-// 			.button {
-// 				text-align: center;
-// 				button {
-// 					color: $font-color;
-// 					background: $primary;
-// 					border: none;
-// 					padding: 10px 20px;
-// 					border-radius: 0px;
-// 					font-weight: $font-weight-semibold;
-// 					letter-spacing: 1px;
-
-// 					&:hover {
-// 						background: $primary_dark;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
 .footer {
 	margin-top: 30px;
 	padding-bottom: 10px;
@@ -514,7 +476,7 @@ body {
 	}
 
 	.tech-stack {
-		margin-top: 30px;
+		// margin-top: 30px;
 		margin-bottom: 30px;
 
 		.title {
