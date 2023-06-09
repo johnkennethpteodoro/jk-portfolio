@@ -219,6 +219,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 		<script>
+			document.body.style.backgroundColor = "#e0e0e0";
 			const switchElement = document.querySelector(".switch");
 			const moonIcon = document.getElementById("moon-icon");
 			const sunIcon = document.getElementById("sun-icon");
@@ -275,7 +276,7 @@
 					document.querySelectorAll(".list-items-mobile ul li a").forEach(function (element) {
 						element.style.color = "#f5f5f5";
 					});
-					document.querySelector(".parent-arrow-down .arrow-down a i").style.color = "#f5f5f5";
+					// document.querySelector(".parent-arrow-down .arrow-down a i").style.color = "#f5f5f5";
 					isWhiteBg = false;
 				} else {
 					bodyElement.classList.remove("dark");
@@ -298,7 +299,7 @@
 					document.querySelectorAll(".list-items-mobile ul li a").forEach(function (element) {
 						element.style.color = "#000";
 					});
-					document.querySelector(".parent-arrow-down .arrow-down a i").style.color = "#000";
+					// document.querySelector(".parent-arrow-down .arrow-down a i").style.color = "#000";
 				}
 
 				initializeBirdsEffect(); // Initialize the VANTA.BIRDS effect

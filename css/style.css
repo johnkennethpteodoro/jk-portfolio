@@ -1460,16 +1460,16 @@ body .line-bg:before {
   opacity: 0.4;
 }
 
-.switch {
-  cursor: pointer;
-}
-
 .dark {
   background: #212121 !important;
 }
 
 .white {
   background-color: #e0e0e0 !important;
+}
+
+.switch {
+  cursor: pointer;
 }
 
 .header-orig {

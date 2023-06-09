@@ -7,6 +7,7 @@
 }
 
 body {
+	// background: inherit !important;
 	.line-bg {
 		display: flex;
 		align-items: center;
@@ -26,16 +27,16 @@ body {
 	}
 }
 
-.switch {
-	cursor: pointer;
-}
-
 .dark {
 	background: #212121 !important;
 }
 
 .white {
 	background-color: #e0e0e0 !important;
+}
+
+.switch {
+	cursor: pointer;
 }
 
 .header-orig {
