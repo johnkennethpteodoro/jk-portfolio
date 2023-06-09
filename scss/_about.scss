@@ -22,10 +22,10 @@
 			width: 36px;
 			height: 36px;
 			text-decoration: none;
-			color: $primary;
+			color: inherit;
 			margin: 0px 12px;
 			transition: all 0.2s ease-in-out;
-			border: 1px solid $primary;
+			border: 1px solid;
 
 			&:hover {
 				color: $font-color;
