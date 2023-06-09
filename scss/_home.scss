@@ -14,7 +14,7 @@
 		color: inherit;
 		text-align: center;
 		font-size: $font-size-xs;
-		font-weight: $font-weight-light;
+		font-weight: $font-weight-regular;
 		margin-bottom: 20px;
 		letter-spacing: 3px;
 	}
@@ -99,7 +99,7 @@
 		.title {
 			font-size: 70px;
 			font-weight: $font-weight-bold;
-			color: $font-color;
+			color: inherit;
 			margin-bottom: 40px;
 			padding-top: 50px;
 		}
@@ -140,7 +140,7 @@
 		}
 
 		.project-details {
-			color: $font-color;
+			color: inherit;
 			margin-left: 50px;
 
 			.project-title {
@@ -356,7 +356,7 @@
 			}
 
 			.project-details {
-				color: $font-color;
+				color: inherit;
 				margin-left: 0px;
 
 				.project-title {
