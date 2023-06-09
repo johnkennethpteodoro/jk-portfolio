@@ -261,7 +261,14 @@
 					sunIcon.style.color = "#fff";
 					document.querySelector(".portfolio").style.color = "#f5f5f5";
 					document.querySelector(".list-items ul li a").style.color = "#f5f5f5";
-					// document.querySelector(".line-bg").style.backgroundColor = "#f5f5f5";
+					document.querySelector(".my-name").style.color = "#f5f5f5";
+					document.querySelector(".hero-title").style.color = "#f5f5f5";
+					const iconElements = document.querySelectorAll(".sm-icon a");
+
+					iconElements.forEach(function (element) {
+						element.style.color = "#f5f5f5";
+						element.style.border = "1px solid #f5f5f5";
+					});
 					document.querySelectorAll(".list-items ul li a").forEach(function (element) {
 						element.style.color = "#f5f5f5";
 					});
@@ -275,7 +282,15 @@
 					sunIcon.style.color = "#212121";
 					isWhiteBg = true;
 					document.querySelector(".portfolio").style.color = "#000";
-					// document.querySelector(".line-bg").style.backgroundColor = "#000";
+					document.querySelector(".my-name").style.color = "#000";
+					document.querySelector(".hero-title").style.color = "#000";
+					document.querySelector(".sm-icon a").style.color = "#000";
+					const iconElements = document.querySelectorAll(".sm-icon a");
+					document.querySelector(".sm-icon a").style.border = "1px solid #000";
+					iconElements.forEach(function (element) {
+						element.style.color = "#000";
+						element.style.border = "1px solid #000";
+					});
 					document.querySelectorAll(".list-items ul li a").forEach(function (element) {
 						element.style.color = "#000";
 					});
