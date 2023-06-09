@@ -399,7 +399,10 @@
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+		<script src="./js/about.js"></script>
 		<script>
+			document.body.style.backgroundColor = "#e0e0e0";
+			document.querySelector(".title").style.color = "#000";
 			const switchElement = document.querySelector(".switch");
 			const moonIcon = document.getElementById("moon-icon");
 			const sunIcon = document.getElementById("sun-icon");
@@ -417,7 +420,7 @@
 					el: ".birds",
 					quantity: 3,
 					color1: 0xd50000,
-					backgroundColor: isWhiteBg ? "#E0E0E0" : "#0D0D0D",
+					backgroundColor: isWhiteBg ? "#ffffff" : "#0D0D0D",
 					color2: 0xd50000,
 					mouseControls: true,
 					touchControls: true,
@@ -441,11 +444,37 @@
 					bodyElement.classList.add("dark");
 					sunIcon.style.color = "#fff";
 					isWhiteBg = false;
+					document.querySelectorAll(".list-items ul li a").forEach(function (element) {
+						element.style.color = "#f5f5f5";
+					});
+
+					document.querySelectorAll(".list-items-mobile ul li a").forEach(function (element) {
+						element.style.color = "#f5f5f5";
+					});
+					document.querySelector(".portfolio").style.color = "#f5f5f5";
+					document.querySelector(".title").style.color = "#f5f5f5";
+					document.querySelector(".footer div h6").style.color = "#f5f5f5";
+					document.querySelector(".footer .copy-right").style.color = "#f5f5f5";
+					const iconElements = document.querySelectorAll(".sm-icon a, div .sm-icon a");
+					iconElements.forEach(function (element) {
+						element.style.color = "#f5f5f5";
+						element.style.border = "1px solid #f5f5f5";
+					});
 				} else {
 					bodyElement.classList.remove("dark");
 					bodyElement.classList.add("white");
 					sunIcon.style.color = "#212121";
 					isWhiteBg = true;
+					document.querySelector(".footer div h6, .footer .copy-right").style.color = "#000";
+					document.querySelector(".title").style.color = "#000";
+					document.querySelector(".sm-icon a").style.color = "#000";
+
+					document.querySelector(".sm-icon a").style.border = "1px solid #000";
+					const iconElements = document.querySelectorAll(".sm-icon a");
+					iconElements.forEach(function (element) {
+						element.style.color = "#000";
+						element.style.border = "1px solid #000";
+					});
 				}
 
 				initializeBirdsEffect(); // Initialize the VANTA.BIRDS effect
@@ -453,6 +482,5 @@
 
 			initializeBirdsEffect(); // Initialize the VANTA.BIRDS effect initially
 		</script>
-		<script src="./js/about.js"></script>
 	</body>
 </html>
