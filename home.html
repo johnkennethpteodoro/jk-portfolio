@@ -262,7 +262,7 @@
 					document.querySelector(".portfolio").style.color = "#f5f5f5";
 					document.querySelector(".list-items ul li a").style.color = "#f5f5f5";
 					// document.querySelector(".line-bg").style.backgroundColor = "#f5f5f5";
-					document.querySelectorAll(".list-items ul li a").forEach(function (element) {
+					document.querySelectorAll(".list-items ul li a, .list-items-mobile ul li a").forEach(function (element) {
 						element.style.color = "#f5f5f5";
 					});
 					isWhiteBg = false;
@@ -273,7 +273,7 @@
 					isWhiteBg = true;
 					document.querySelector(".portfolio").style.color = "#000";
 					// document.querySelector(".line-bg").style.backgroundColor = "#000";
-					document.querySelectorAll(".list-items ul li a").forEach(function (element) {
+					document.querySelectorAll(".list-items ul li a", ".list-items-mobile ul li a").forEach(function (element) {
 						element.style.color = "#000";
 					});
 				}
