@@ -367,7 +367,6 @@
 
 				.project-description {
 					font-size: $font-size-xxs;
-					font-weight: $font-weight-light;
 					margin-top: 15px;
 				}
 
@@ -435,7 +434,7 @@
 
 		.copy-right {
 			margin-top: 10px !important;
-			color: $font-color;
+			color: inherit;
 			font-size: $font-size-xxs;
 			font-weight: $font-weight-light;
 			text-align: center;

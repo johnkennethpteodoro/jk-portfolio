@@ -116,7 +116,7 @@ body {
 	padding-bottom: 10px;
 	div {
 		h6 {
-			color: $font-color;
+			color: inherit;
 		}
 		.sm-icon {
 			display: flex;
@@ -134,10 +134,10 @@ body {
 				width: 36px;
 				height: 36px;
 				text-decoration: none;
-				color: $font-color !important;
+				color: inherit;
 				margin-right: 15px;
 				transition: all 0.3s ease-in-out;
-				border: 1px solid $font-color;
+				border: 1px solid;
 
 				&:hover {
 					color: $primary !important;
@@ -167,9 +167,9 @@ body {
 
 	.copy-right {
 		margin-top: 30px;
-		color: $font-color;
+		color: inherit;
 		font-size: $font-size-xxs;
-		font-weight: $font-weight-light;
+		font-weight: $font-weight-regular;
 		text-align: center;
 		letter-spacing: 2px;
 	}
