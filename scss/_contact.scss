@@ -190,7 +190,7 @@
 				.git {
 					font-size: $font-size-md;
 					font-weight: $font-weight-bold;
-					color: $font-color;
+					color: inherit;
 					text-align: center;
 				}
 
@@ -203,7 +203,7 @@
 					text-align: center;
 
 					a {
-						color: $font-color;
+						color: inherit;
 					}
 				}
 
@@ -240,7 +240,7 @@
 					.git {
 						font-size: $font-size-md;
 						font-weight: $font-weight-bold;
-						color: $font-color;
+						color: inherit;
 						margin-bottom: 20px;
 					}
 					margin-top: 60px;
@@ -248,7 +248,7 @@
 						margin-bottom: 10px;
 						display: flex;
 						justify-content: start;
-						color: $font-color;
+						color: inherit;
 						svg {
 							margin-right: 15px;
 							margin-left: 20px;
