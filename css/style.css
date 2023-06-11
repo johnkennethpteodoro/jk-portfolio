@@ -603,7 +603,7 @@
     color: #f5f5f5;
     margin-bottom: 50px;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -40px;
   }
   .about .sm-icon {
     display: none;
@@ -823,7 +823,7 @@
     color: #f5f5f5;
     margin-bottom: 50px;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -40px;
   }
   .project .proj-child {
     display: block;
@@ -1024,7 +1024,7 @@
     color: #f5f5f5;
     margin-bottom: 50px;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -40px;
   }
   .experience .expi-content .card {
     margin-bottom: 100px;
@@ -1270,7 +1270,7 @@
     color: #f5f5f5;
     margin-bottom: 50px;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -40px;
   }
   .contact .contact-content {
     margin-bottom: 100px;
