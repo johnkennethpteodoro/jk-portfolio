@@ -157,19 +157,24 @@
 		.list-items {
 			display: none;
 		}
+	}
 
-		.list-items-mobile ul {
-			display: flex;
-			justify-content: space-between;
-			list-style: none;
-			padding: 0px;
+	.list-items-mobile ul {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		padding: 0px;
 
-			li a {
-				color: $font-color;
-				text-decoration: none;
-				font-size: $font-size-xs;
-				font-weight: $font-weight-light;
-			}
+		li a {
+			color: $font-color;
+			text-decoration: none;
+			font-size: $font-size-xs;
+			font-weight: $font-weight-light;
+		}
+
+		.active .active-a {
+			font-weight: $font-weight-regular;
+			font-size: 15px;
 		}
 	}
 

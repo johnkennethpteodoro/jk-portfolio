@@ -78,6 +78,82 @@
 	}
 }
 
+.header-orig {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 6px;
+	padding-top: 12px;
+	.logo {
+		.name {
+			color: $primary;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: $font-size-md;
+			margin-bottom: 0;
+			cursor: pointer;
+			text-decoration: none;
+			font-weight: $font-weight-bold;
+
+			&:hover {
+				color: $primary_dark;
+			}
+		}
+
+		.portfolio {
+			margin-top: 0;
+			// color: $font-color;
+			letter-spacing: 4px;
+			font-weight: 400;
+			font-size: $font-size-xxs;
+		}
+	}
+
+	.list-items ul {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+		list-style: none;
+
+		li a {
+			color: inherit;
+			text-decoration: none;
+			padding: 10px 20px;
+			font-size: $font-size-xs;
+			font-weight: $font-weight-light;
+			letter-spacing: 1px;
+		}
+		.active .active-a {
+			font-weight: $font-weight-regular;
+			font-size: 15px;
+		}
+	}
+
+	.button {
+		button {
+			color: $font-color;
+			background: $primary;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 0px !important;
+			font-weight: $font-weight-semibold;
+
+			a {
+				color: $font-color;
+				text-decoration: none;
+				svg {
+					margin-left: 4px;
+					margin-bottom: 4px;
+				}
+			}
+
+			&:hover {
+				background: $primary_dark;
+			}
+		}
+	}
+}
+
 /* desktop display */
 @media only screen and (min-width: 992px) {
 	.list-items-mobile {
@@ -99,24 +175,24 @@
 		.list-items {
 			display: none;
 		}
+	}
 
-		.list-items-mobile ul {
-			display: flex;
-			justify-content: space-between;
-			list-style: none;
-			padding: 0px;
+	.list-items-mobile ul {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		padding: 0px;
 
-			li a {
-				color: $font-color;
-				text-decoration: none;
-				font-size: $font-size-xs;
-				font-weight: $font-weight-light;
-			}
+		li a {
+			color: $font-color;
+			text-decoration: none;
+			font-size: $font-size-xs;
+			font-weight: $font-weight-light;
+		}
 
-			.active .active-a {
-				font-weight: $font-weight-regular;
-				font-size: 15px;
-			}
+		.active .active-a {
+			font-weight: $font-weight-regular;
+			font-size: 15px;
 		}
 	}
 
